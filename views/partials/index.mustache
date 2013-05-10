@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+
+        {{# portfolio }}
+            <!-- BOX -->
+            <div class="span4 box">
+                <div class="box-inner">
+                    <div class="image">
+                        <!--<img src="http://placehold.it/480x320"/>-->
+                    </div>
+                    <div class="title">
+                        {{ name }}
+                    </div>
+                    <div class="description">
+                        {{ description }}
+                    </div>
+                    <div class="actions">
+
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-small">
+                                <i class="icon-eye-open"></i> Demo
+                            </a>
+                            <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Home page</a></li>
+                                <li><a href="#">Administrator</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <a href="#" class="btn btn-small">
+                                <i class="icon-book"></i> Manual
+                            </a>
+                            <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Manual Book</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#" class="btn btn-small"><i class="icon-camera"></i> Screenshots</a>
+                    </div>
+                </div>
+            </div>
+            <!--/ BOX -->
+        {{/ portfolio }}
+
+    </div>
+</div>

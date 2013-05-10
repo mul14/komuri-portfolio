@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mustache/mustache": "2.3.*",
+        "j4mie/idiorm": "1.3.*"
+    }
+}
