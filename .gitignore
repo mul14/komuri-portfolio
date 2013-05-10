@@ -1,2 +1,22 @@
+composer.lock
 vendor/
 tmp/
+
+
+# IDE & Text Editor
+*~
+.idea/
+nbproject/
+
+
+# Windows, Mac OS X, Linux
+ Thumbs.db
+ ehthumbs.db
+ $RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
