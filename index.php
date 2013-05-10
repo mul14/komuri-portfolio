@@ -180,9 +180,13 @@
 
 <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="//masonry.desandro.com/jquery.masonry.min.js"></script>
 <script>
     $(function () {
-
+        $('.main .container').masonry({
+            itemSelector: '.box',
+            isFitWidth: true
+        });
     })
 </script>
 </body>
