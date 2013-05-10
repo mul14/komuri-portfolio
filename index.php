@@ -1,10 +1,19 @@
 <?php
 require_once realpath(__DIR__ . '/vendor/autoload.php');
+use \Symfony\Component\Yaml\Yaml as Yaml;
 
-ORM::configure('mysql:host=localhost;dbname=komuri_portfolio');
+define('ENVIRONMENT', 'development');
+
+$yaml     = new Yaml;
+$dbconfig = $yaml->parse(file_get_contents(__DIR__ . '/phinx.yml'));
+$dbconfig = $dbconfig['environments'][ENVIRONMENT];
+
+$dsn = sprintf('%s:host=%s;port=%s;dbname=%s', $dbconfig['adapter'], $dbconfig['host'], $dbconfig['port'], $dbconfig['name']);
+
 ORM::configure(array(
-    'username' => 'root',
-    'password' => '',
+    'connection_string' => $dsn,
+    'username'          => $dbconfig['user'],
+    'password'          => $dbconfig['pass'],
 ));
 
 $portfolio = ORM::for_table('portfolio')->find_array();
