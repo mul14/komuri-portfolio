@@ -85,6 +85,10 @@
             text-align: center;
         }
 
+        .main .actions ul {
+            text-align: left;
+        }
+
         footer {
             padding: 10px 0;
             background: #111;
@@ -115,6 +119,7 @@
     <div class="container">
         <div class="row">
             <?php for ($i = 1; $i <= 12; $i++): ?>
+                <!-- BOX -->
                 <div class="span4 box">
                     <div class="box-inner">
                         <div class="image">
@@ -131,12 +136,37 @@
                             rem ut? Blanditiis, nisi?
                         </div>
                         <div class="actions">
-                            <a href="javascript:;" class="btn btn-small">Demo</a>
-                            <a href="javascript:;" class="btn btn-small">Manual</a>
-                            <a href="javascript:;" class="btn btn-small">Screenshots</a>
+
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-small">
+                                    <i class="icon-eye-open"></i> Demo
+                                </a>
+                                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Home page</a></li>
+                                    <li><a href="#">Administrator</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-small">
+                                    <i class="icon-book"></i> Manual
+                                </a>
+                                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Manual Book</a></li>
+                                </ul>
+                            </div>
+
+                            <a href="#" class="btn btn-small"><i class="icon-camera"></i> Screenshots</a>
                         </div>
                     </div>
                 </div>
+                <!--/ BOX -->
             <?php endfor ?>
         </div>
     </div>
