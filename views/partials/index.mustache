@@ -6,7 +6,9 @@
             <div class="span4 box">
                 <div class="box-inner">
                     <div class="image">
-                        <img src="http://placehold.it/480x320"/>
+                        <a class="fancybox" href="{{ image_url }}">
+                            <img src="{{ image_url }}" />
+                        </a>
                     </div>
                     <div class="title">
                         {{ name }}
@@ -17,14 +19,14 @@
                     <div class="actions">
 
                         <div class="btn-group">
-                            <a href="#" class="btn btn-small">
+                            <a href="{{ url }}" class="btn btn-small">
                                 <i class="icon-eye-open"></i> Demo
                             </a>
                             <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#">
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Home page</a></li>
+                                <li><a href="{{ url }}">Home page</a></li>
                                 <li><a href="#">Administrator</a></li>
                             </ul>
                         </div>
