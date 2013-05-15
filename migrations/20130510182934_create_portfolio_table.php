@@ -16,13 +16,13 @@ class CreatePortfolioTable extends AbstractMigration
     {
     }
     */
-    
+
     /**
      * Migrate Up.
      */
     public function up()
     {
-        $portfolio = $this->table('portfolio_');
+        $portfolio = $this->table('portfolio');
         $portfolio
             ->addColumn('name', 'string', array('limit' => 255))
             ->addColumn('url', 'string', array('limit' => 255))
@@ -41,6 +41,6 @@ class CreatePortfolioTable extends AbstractMigration
      */
     public function down()
     {
-        $this->dropTable('portfolio_');
+        $this->dropTable('portfolio');
     }
 }
