@@ -21,3 +21,9 @@ Edit file `phinx.yml`
 Run migration
 
 `./vendor/bin/phinx migrate`
+
+### Compile the Assets
+
+Run this command to compile LESS files into CSS.
+
+`./console build`

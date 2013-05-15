@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+require_once 'vendor/autoload.php';
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
+$console = new Application();
+
+$console->register('build')
+        ->setDescription('Compile all "assets/*.less" file into "public/css/style.min.css"')
+        ->setCode(function (InputInterface $input, OutputInterface $output) {
+            $less = new lessc;
+            $less->setFormatter("compressed");
+            $less->setImportDir('assets/style/');
+
+            try {
+                $output->writeln('<info>Compiling LESS into CSS...</info>');
+                $less->checkedCompile('assets/less/style.less', 'public/css/style.min.css');
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+
+        });
+
+$console->run();
